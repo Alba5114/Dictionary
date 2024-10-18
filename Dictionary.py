@@ -14,7 +14,6 @@ dictionary = {
     "11.317940136293140164931024711442182814": "Word with an oddly specific serial number"
 }
 
-dictionary["newKey"] = "signin"
 while i == 1:
     search = input("Awaiting input : ")
     if search in dictionary.keys():
