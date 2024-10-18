@@ -12,9 +12,9 @@ dictionary = {
     "9": "Word registered with the serial number 9",
     "10": "Word registered with the serial number 10",
     "11.317940136293140164931024711442182814": "Word with an oddly specific serial number"
-    
-    
 }
+
+dictionary["newKey"] = "signin"
 while i == 1:
     search = input("Awaiting input : ")
     if search in dictionary.keys():
@@ -22,4 +22,9 @@ while i == 1:
         print("Definition: " + dictionary[search] + " \n --------------------------------------------------------")
     else:
         print("We couldn't find an entry named '" + search + "', make sure your spelling is correct or search for another word" + "\n ----------------------------------------- ")
-  
+        newEntry = input("Would you like to add this word to the dictionary? (Y/N) : ")
+        if newEntry == "Y" or newEntry == "y":
+            newValue = input("Enter the meaning of this word : ")
+            dictionary[search] = newValue
+            print("Your word has been added to the dictionary! \n ---------------------------------------")
+
